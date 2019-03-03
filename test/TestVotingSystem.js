@@ -168,23 +168,22 @@ const ThrowProxy = artifacts.require("ThrowProxy");
 
 contract('VotingSystem', (accounts) => {
 
-it('should not add a committee member', async () => {
+    it('should not add a committee member', async () => {
 
-    let votingSystemInst = await VotingSystem.deployed();
-    let testVotingSystemInst = await testVotingSystem.deployed();
+        let votingSystemInst = await VotingSystem.deployed();
+        let testVotingSystemInst = await testVotingSystem.deployed();
 
-    let nonAdminTP = await ThrowProxy.new(votingSystemInst.address);
+        let nonAdminTP = await ThrowProxy.new(votingSystemInst.address);
 
-    let nonAdminTP2 = await ThrowProxy.new(votingSystemInst.address);
+        let nonAdminTP2 = await ThrowProxy.new(votingSystemInst.address);
 
-    //await votingSystemInst.changeAdmin(nonAdminTP.address);
-    await votingSystemInst.addCommittee(nonAdminTP.address, {from: nonAdminTP.address});
-    let check = await nonAdminTP.__execute.gas(200000);
+        let fakeVoting = VotingSystem(nonAdminTP.address);
+
+        await fakeVoting.addCommittee(nonAdminTP.address);
 
 
-    assert.equal(check, false, "user was able to add themselves to the committee");
-    //assert.equal(check, false, "committee member not added");
-  });
+        assert.equal(check, false, "user was able to add themselves to the committee");
+    });
 
   // it('should not add a committee member', async () => {
 
@@ -195,13 +194,8 @@ it('should not add a committee member', async () => {
 
   //   let nonAdminTP2 = await ThrowProxy.new(votingSystemInst.address);
 
-  //   //await votingSystemInst.changeAdmin(nonAdminTP.address);
-  //   //await VotingSystem(nonAdminTP.address).addCommittee(nonAdminTP.address);
-  //   //let check = await nonAdminTP.__execute.gas(200000);
-
-  //   let check = await testVotingSystemInst.failCommitteeMember.call(nonAdminTP.address, nonAdminTP.address);
+  //   let check = await testVotingSystemInst.testAddCommittee.call(nonAdminTP.address, nonAdminTP.address);
 
   //   assert.equal(check, false, "user was able to add themselves to the committee");
-  //   //assert.equal(check, false, "committee member not added");
   // });
 });
