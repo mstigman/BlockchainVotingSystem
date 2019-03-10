@@ -1,0 +1,1643 @@
+it('should fail AddCommittee called by committee in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call AddCommittee in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail AddCommittee called by voter in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddCommittee in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail AddCommittee called by none in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call AddCommittee in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by committee in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call BeginRegistration in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by voter in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call BeginRegistration in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by none in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call BeginRegistration in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail AddVoter called by admin in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call AddVoter in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail AddVoter called by committee in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call AddVoter in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail AddVoter called by voter in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddVoter in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail AddVoter called by none in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call AddVoter in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by admin in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call InitializeVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by committee in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call InitializeVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by voter in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call InitializeVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by none in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call InitializeVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by admin in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call ConfirmVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by committee in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call ConfirmVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by voter in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call ConfirmVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by none in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call ConfirmVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail DenyVoting called by admin in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call DenyVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail DenyVoting called by committee in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call DenyVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail DenyVoting called by voter in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call DenyVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail DenyVoting called by none in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call DenyVoting in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail Vote called by admin in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call Vote in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail Vote called by committee in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call Vote in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail Vote called by voter in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call Vote in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail Vote called by none in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call Vote in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail GetWinner called by admin in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call GetWinner in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail GetWinner called by committee in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call GetWinner in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail GetWinner called by voter in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call GetWinner in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should fail GetWinner called by none in state STATE_ADD_COMMITTEE', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call GetWinner in state STATE_ADD_COMMITTEE successfully");
+
+  });
+
+
+it('should set the state to registration', async () => {{
+             let votingSystemInst = await VotingSystem.deployed();
+             await votingSystemInst.addCommittee(accounts[0], {from: accounts[0]});
+             await votingSystemInst.beginRegistration({from: accounts[0]});
+ }});
+
+
+it('should fail AddCommittee called by admin in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call AddCommittee in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail AddCommittee called by committee in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call AddCommittee in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail AddCommittee called by voter in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddCommittee in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail AddCommittee called by none in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call AddCommittee in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by admin in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call BeginRegistration in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by committee in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call BeginRegistration in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by voter in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call BeginRegistration in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by none in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call BeginRegistration in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail AddVoter called by voter in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddVoter in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by admin in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call InitializeVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by voter in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call InitializeVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by none in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call InitializeVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by admin in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call ConfirmVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by committee in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call ConfirmVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by voter in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call ConfirmVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by none in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call ConfirmVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail DenyVoting called by admin in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call DenyVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail DenyVoting called by committee in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call DenyVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail DenyVoting called by voter in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call DenyVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail DenyVoting called by none in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call DenyVoting in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail Vote called by admin in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call Vote in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail Vote called by committee in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call Vote in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail Vote called by voter in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call Vote in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail Vote called by none in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call Vote in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail GetWinner called by admin in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call GetWinner in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail GetWinner called by committee in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call GetWinner in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail GetWinner called by voter in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call GetWinner in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should fail GetWinner called by none in state STATE_REGISTRATION', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call GetWinner in state STATE_REGISTRATION successfully");
+
+  });
+
+
+it('should set the state to prevoting', async () => {{
+             let votingSystemInst = await VotingSystem.deployed();
+             await votingSystemInst.addVoter({from: accounts[0]})
+             await votingSystemInst.initializeVoting({from: accounts[0]});
+ }});
+
+
+it('should fail AddCommittee called by admin in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call AddCommittee in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail AddCommittee called by committee in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call AddCommittee in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail AddCommittee called by voter in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddCommittee in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail AddCommittee called by none in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call AddCommittee in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by admin in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call BeginRegistration in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by committee in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call BeginRegistration in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by voter in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call BeginRegistration in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by none in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call BeginRegistration in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail AddVoter called by admin in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call AddVoter in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail AddVoter called by committee in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call AddVoter in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail AddVoter called by voter in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddVoter in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail AddVoter called by none in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call AddVoter in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by admin in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call InitializeVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by committee in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call InitializeVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by voter in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call InitializeVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by none in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call InitializeVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by admin in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call ConfirmVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by voter in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call ConfirmVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by none in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call ConfirmVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail DenyVoting called by admin in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call DenyVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail DenyVoting called by voter in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call DenyVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail DenyVoting called by none in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call DenyVoting in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail Vote called by admin in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call Vote in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail Vote called by committee in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call Vote in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail Vote called by voter in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call Vote in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail Vote called by none in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call Vote in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail GetWinner called by admin in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call GetWinner in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail GetWinner called by committee in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call GetWinner in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail GetWinner called by voter in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call GetWinner in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should fail GetWinner called by none in state STATE_PREVOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call GetWinner in state STATE_PREVOTING successfully");
+
+  });
+
+
+it('should set the state to voting', async () => {{
+             let votingSystemInst = await VotingSystem.deployed();
+             await votingSystemInst.confirmVoting({from: accounts[0]});
+ }});
+
+
+it('should fail AddCommittee called by admin in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call AddCommittee in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail AddCommittee called by committee in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call AddCommittee in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail AddCommittee called by voter in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddCommittee in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail AddCommittee called by none in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call AddCommittee in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by admin in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call BeginRegistration in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by committee in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call BeginRegistration in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by voter in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call BeginRegistration in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by none in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call BeginRegistration in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail AddVoter called by admin in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call AddVoter in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail AddVoter called by committee in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call AddVoter in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail AddVoter called by voter in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddVoter in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail AddVoter called by none in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call AddVoter in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by admin in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call InitializeVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by committee in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call InitializeVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by voter in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call InitializeVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by none in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call InitializeVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by admin in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call ConfirmVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by committee in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call ConfirmVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by voter in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call ConfirmVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by none in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call ConfirmVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail DenyVoting called by admin in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call DenyVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail DenyVoting called by committee in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call DenyVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail DenyVoting called by voter in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call DenyVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail DenyVoting called by none in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call DenyVoting in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail Vote called by admin in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call Vote in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail Vote called by committee in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call Vote in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail Vote called by none in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call Vote in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail GetWinner called by admin in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call GetWinner in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail GetWinner called by committee in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call GetWinner in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail GetWinner called by voter in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call GetWinner in state STATE_VOTING successfully");
+
+  });
+
+
+it('should fail GetWinner called by none in state STATE_VOTING', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testGetWinner.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call GetWinner in state STATE_VOTING successfully");
+
+  });
+
+
+it('should set the state to finalized', async () => {{
+             let votingSystemInst = await VotingSystem.deployed();
+             await votingSystemInst.vote(accounts[0], {from: accounts[0]});
+ }});
+
+
+it('should fail AddCommittee called by admin in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call AddCommittee in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail AddCommittee called by committee in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call AddCommittee in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail AddCommittee called by voter in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddCommittee in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail AddCommittee called by none in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddCommittee.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call AddCommittee in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by admin in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call BeginRegistration in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by committee in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call BeginRegistration in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by voter in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call BeginRegistration in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail BeginRegistration called by none in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testBeginRegistration.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call BeginRegistration in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail AddVoter called by admin in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call AddVoter in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail AddVoter called by committee in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call AddVoter in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail AddVoter called by voter in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call AddVoter in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail AddVoter called by none in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testAddVoter.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call AddVoter in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by admin in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call InitializeVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by committee in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call InitializeVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by voter in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call InitializeVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail InitializeVoting called by none in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testInitializeVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call InitializeVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by admin in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call ConfirmVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by committee in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call ConfirmVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by voter in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call ConfirmVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail ConfirmVoting called by none in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testConfirmVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call ConfirmVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail DenyVoting called by admin in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call DenyVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail DenyVoting called by committee in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call DenyVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail DenyVoting called by voter in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call DenyVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail DenyVoting called by none in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testDenyVoting.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call DenyVoting in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail Vote called by admin in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "admin was able to call Vote in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail Vote called by committee in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "committee was able to call Vote in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail Vote called by voter in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "voter was able to call Vote in state STATE_FINALIZED successfully");
+
+  });
+
+
+it('should fail Vote called by none in state STATE_FINALIZED', async () => {
+    let votingSystemInst = await VotingSystem.deployed();
+    let testVotingSystemInst = await testVotingSystem.deployed();
+    let nonSpecificUser = await ThrowProxy.new(votingSystemInst.address);
+    let usedInFunction = await ThrowProxy.new(votingSystemInst.address);
+    let check = await testVotingSystemInst.testVote.call(nonSpecificUser.address, usedInFunction.address);
+    assert.equal(check, false, "none was able to call Vote in state STATE_FINALIZED successfully");
+
+  });
+
+

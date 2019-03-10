@@ -100,67 +100,67 @@ contract VotingSystem {
         if(addr != currentFirst && candidates[addr] > candidates[currentFirst]) {
             currentSecond = currentFirst;
             currentFirst = addr;
-        } else if(addr != currentFirst && candidates[addr] > candidates[currentSecond]) {
-            currentSecond = addr;
+            } else if(addr != currentFirst && candidates[addr] > candidates[currentSecond]) {
+                currentSecond = addr;
+            }
+            if(candidates[currentFirst] > candidates[currentSecond] + populationLeftToVote) {
+                state = STATE_FINALIZED;
+                winner = currentFirst;
+            }
         }
-        if(candidates[currentFirst] > candidates[currentSecond] + populationLeftToVote) {
-            state = STATE_FINALIZED;
-            winner = currentFirst;
+
+        function getWinner() public view returns (address won) {
+            require(state == STATE_FINALIZED);
+            return winner;
+        }
+
+        function queryVotersLeft() public view returns (uint votersLeft) {
+            return populationLeftToVote;
+        }
+
+        function queryNumberVoters() public view returns (uint voters) {
+            return populationSize;
+        }
+
+        function queryCommittee(address addr) public view returns (bool canVoteAsCommittee) {
+            return committee[addr];
+        }
+
+        function queryIsRegistered() public view returns (bool canVote) {
+            return population[msg.sender];
+        }
+
+        function queryStateInt() public view returns (uint stateInt) {
+            return state;
+        }
+
+        function queryState() public view returns (string memory currentState) {
+            if(state == STATE_ADD_COMMITTEE) {
+                return "adding committee members";
+            }
+            if(state == STATE_REGISTRATION) {
+                return "registration of voters";
+            }
+            if(state == STATE_PREVOTING) {
+                return "prevoting verification";
+            }
+            if(state == STATE_VOTING) {
+                return "voting phase";
+            }
+            if(state == STATE_FINALIZED) {
+                return "finalized";
+            }
+            return "error";
+        }
+
+        function queryCurrentFirst() public view returns (address inFirst) {
+            return currentFirst;
+        }
+
+        function queryCurrentSecond() public view returns (address inSecond) {
+            return currentSecond;
         }
     }
-
-    function getWinner() public view returns (address won) {
-        require(state == STATE_FINALIZED);
-        return winner;
-    }
-
-    function queryVotersLeft() public view returns (uint votersLeft) {
-        return populationLeftToVote;
-    }
-
-    function queryNumberVoters() public view returns (uint voters) {
-        return populationSize;
-    }
-
-    function queryCommittee(address addr) public view returns (bool canVoteAsCommittee) {
-        return committee[addr];
-    }
-
-    function queryIsRegistered() public view returns (bool canVote) {
-        return population[msg.sender];
-    }
-
-    function queryStateInt() public view returns (uint stateInt) {
-        return state;
-    }
-
-    function queryState() public view returns (string memory currentState) {
-        if(state == STATE_ADD_COMMITTEE) {
-            return "adding committee members";
-        }
-        if(state == STATE_REGISTRATION) {
-            return "registration of voters";
-        }
-        if(state == STATE_PREVOTING) {
-            return "prevoting verification";
-        }
-        if(state == STATE_VOTING) {
-            return "voting phase";
-        }
-        if(state == STATE_FINALIZED) {
-            return "finalized";
-        }
-        return "error";
-    }
-
-    function queryCurrentFirst() public view returns (address inFirst) {
-        return currentFirst;
-    }
-
-    function queryCurrentSecond() public view returns (address inSecond) {
-        return currentSecond;
-    }
-}
 
     contract ThrowProxy {
         address public _target;
@@ -184,12 +184,76 @@ contract VotingSystem {
     }
 
     contract testVotingSystem {
+        mapping (string => address) committeeUsers;
+        mapping (string => address) voterUsers;
+        address admin;
 
-        function testAddCommittee(address nonAdminUser, address committee) public returns (bool success) {
-            VotingSystem(nonAdminUser).addCommittee(committee);
-            bool r = ThrowProxy(nonAdminUser).__execute.gas(200000)();
+        function setAdmin(address value) public {
+            admin = value;
+        }
+        function getAdmin() public returns (address value) {
+            return admin;
+        }
+        function setCommittee(string memory key, address value) public {
+            committeeUsers[key] = value;
+        }
+        function getCommittee(string memory key) public returns (address value) {
+            return committeeUsers[key];
+        }
+
+        function setVoter(string memory key, address value) public {
+            voterUsers[key] = value;
+        }
+        function getVoter(string memory key) public returns (address value) {
+            return voterUsers[key];
+        }
+
+        function testAddCommittee(address user, address committee) public returns (bool success) {
+            VotingSystem(admin).addCommittee(committee);
+            bool r = ThrowProxy(admin).__execute.gas(200000)();
             return r;
         }
 
+        function testBeginRegistration(address user, address empty) public returns (bool success) {
+            VotingSystem(user).beginRegistration();
+            bool r = ThrowProxy(user).__execute.gas(200000)();
+            return r;
+        }
+
+        function testAddVoter(address user, address empty) public returns (bool success) {
+            VotingSystem(user).addVoter();
+            bool r = ThrowProxy(user).__execute.gas(200000)();
+            return r;
+        }
+
+        function testInitializeVoting(address user, address empty) public returns (bool success) {
+            VotingSystem(user).initializeVoting();
+            bool r = ThrowProxy(user).__execute.gas(200000)();
+            return r;
+        }
+
+        function testConfirmVoting(address user, address empty) public returns (bool success) {
+            VotingSystem(user).confirmVoting();
+            bool r = ThrowProxy(user).__execute.gas(200000)();
+            return r;
+        }
+
+        function testDenyVoting(address user, address empty) public returns (bool success) {
+            VotingSystem(user).denyVoting();
+            bool r = ThrowProxy(user).__execute.gas(200000)();
+            return r;
+        }
+
+        function testVote(address user, address candidate) public returns (bool success) {
+            VotingSystem(user).vote(candidate);
+            bool r = ThrowProxy(user).__execute.gas(200000)();
+            return r;
+        }
+
+        function testGetWinner(address user, address empty) public returns (bool success) {
+            VotingSystem(user).getWinner();
+            bool r = ThrowProxy(user).__execute.gas(200000)();
+            return r;
+        }
     }
 

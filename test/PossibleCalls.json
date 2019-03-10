@@ -1,17 +1,22 @@
 {
-    "actors": ["admin", "committee", "voter"],
+    "actors": ["admin", "committee", "voter", "none"],
     "states": ["STATE_ADD_COMMITTEE", "STATE_REGISTRATION", "STATE_PREVOTING", "STATE_VOTING", "STATE_FINALIZED"],
-    "functions": ["addCommittee", "beginRegistration", "addVoter", "initializeVoting", "confirmVoting", "denyVoting", "vote", "getWinner"],
+    "functions": ["AddCommittee", "BeginRegistration", "AddVoter", "InitializeVoting", "ConfirmVoting", "DenyVoting", "Vote", "GetWinner"],
 
 
     "validTransitions": [
-        ["admin", "STATE_ADD_COMMITTEE", "addCommittee"],
-        ["admin", "STATE_ADD_COMMITTEE", "beginRegistration"],
-        ["_", "STATE_REGISTRATION", "addVoter"],
-        ["committee", "STATE_REGISTRATION", "initializeVoting"],
-        ["committee", "STATE_PREVOTING", "confirmVoting"],
-        ["committee", "STATE_PREVOTING", "denyVoting"],
-        ["_", "STATE_VOTING", "vote"],
-        ["_", "STATE_FINALIZED", "getWinner"]
+        ["admin", "STATE_ADD_COMMITTEE", "AddCommittee"],
+        ["admin", "STATE_ADD_COMMITTEE", "BeginRegistration"],
+        ["admin", "STATE_REGISTRATION", "AddVoter"],
+        ["committee", "STATE_REGISTRATION", "AddVoter"],
+        ["none", "STATE_REGISTRATION", "AddVoter"],
+        ["committee", "STATE_REGISTRATION", "InitializeVoting"],
+        ["committee", "STATE_PREVOTING", "ConfirmVoting"],
+        ["committee", "STATE_PREVOTING", "DenyVoting"],
+        ["voter", "STATE_VOTING", "Vote"],
+        ["admin", "STATE_FINALIZED", "GetWinner"],
+        ["committee", "STATE_FINALIZED", "GetWinner"],
+        ["voter", "STATE_FINALIZED", "GetWinner"],
+        ["none", "STATE_FINALIZED", "GetWinner"]
     ]
 }
