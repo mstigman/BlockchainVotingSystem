@@ -184,75 +184,60 @@ contract VotingSystem {
     }
 
     contract testVotingSystem {
-        mapping (string => address) committeeUsers;
-        mapping (string => address) voterUsers;
-        address admin;
+        mapping (string => address) users;
 
-        function setAdmin(address value) public {
-            admin = value;
+        function setUser(string memory key, address value) public {
+            users[key] = value;
         }
-        function getAdmin() public returns (address value) {
-            return admin;
-        }
-        function setCommittee(string memory key, address value) public {
-            committeeUsers[key] = value;
-        }
-        function getCommittee(string memory key) public returns (address value) {
-            return committeeUsers[key];
+        function getUser(string memory key) public returns (address value) {
+            return users[key];
         }
 
-        function setVoter(string memory key, address value) public {
-            voterUsers[key] = value;
-        }
-        function getVoter(string memory key) public returns (address value) {
-            return voterUsers[key];
-        }
-
-        function testAddCommittee(address user, address committee) public returns (bool success) {
-            VotingSystem(admin).addCommittee(committee);
-            bool r = ThrowProxy(admin).__execute.gas(200000)();
+        function testAddCommittee(string memory user, address committee) public returns (bool success) {
+            VotingSystem(users[user]).addCommittee(committee);
+            bool r = ThrowProxy(users[user]).__execute.gas(200000)();
             return r;
         }
 
-        function testBeginRegistration(address user, address empty) public returns (bool success) {
-            VotingSystem(user).beginRegistration();
-            bool r = ThrowProxy(user).__execute.gas(200000)();
+        function testBeginRegistration(string memory user, address empty) public returns (bool success) {
+            VotingSystem(users[user]).beginRegistration();
+            bool r = ThrowProxy(users[user]).__execute.gas(200000)();
             return r;
         }
 
-        function testAddVoter(address user, address empty) public returns (bool success) {
-            VotingSystem(user).addVoter();
-            bool r = ThrowProxy(user).__execute.gas(200000)();
+        function testAddVoter(string memory user, address empty) public returns (bool success) {
+            VotingSystem(users[user]).addVoter();
+            bool r = ThrowProxy(users[user]).__execute.gas(200000)();
             return r;
         }
 
-        function testInitializeVoting(address user, address empty) public returns (bool success) {
-            VotingSystem(user).initializeVoting();
-            bool r = ThrowProxy(user).__execute.gas(200000)();
+        function testInitializeVoting(string memory user, address empty) public returns (bool success) {
+            VotingSystem(users[user]).initializeVoting();
+            bool r = ThrowProxy(users[user]).__execute.gas(200000)();
             return r;
         }
 
-        function testConfirmVoting(address user, address empty) public returns (bool success) {
-            VotingSystem(user).confirmVoting();
-            bool r = ThrowProxy(user).__execute.gas(200000)();
+        function testConfirmVoting(string memory user, address empty) public returns (bool success) {
+            VotingSystem(users[user]).confirmVoting();
+            bool r = ThrowProxy(users[user]).__execute.gas(200000)();
             return r;
         }
 
-        function testDenyVoting(address user, address empty) public returns (bool success) {
-            VotingSystem(user).denyVoting();
-            bool r = ThrowProxy(user).__execute.gas(200000)();
+        function testDenyVoting(string memory user, address empty) public returns (bool success) {
+            VotingSystem(users[user]).denyVoting();
+            bool r = ThrowProxy(users[user]).__execute.gas(200000)();
             return r;
         }
 
-        function testVote(address user, address candidate) public returns (bool success) {
-            VotingSystem(user).vote(candidate);
-            bool r = ThrowProxy(user).__execute.gas(200000)();
+        function testVote(string memory user, address candidate) public returns (bool success) {
+            VotingSystem(users[user]).vote(candidate);
+            bool r = ThrowProxy(users[user]).__execute.gas(200000)();
             return r;
         }
 
-        function testGetWinner(address user, address empty) public returns (bool success) {
-            VotingSystem(user).getWinner();
-            bool r = ThrowProxy(user).__execute.gas(200000)();
+        function testGetWinner(string memory user, address empty) public returns (bool success) {
+            VotingSystem(users[user]).getWinner();
+            bool r = ThrowProxy(users[user]).__execute.gas(200000)();
             return r;
         }
     }

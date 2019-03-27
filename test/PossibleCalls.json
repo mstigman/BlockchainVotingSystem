@@ -1,7 +1,7 @@
 {
     "actors": ["admin", "committee", "voter", "none"],
     "states": ["STATE_ADD_COMMITTEE", "STATE_REGISTRATION", "STATE_PREVOTING", "STATE_VOTING", "STATE_FINALIZED"],
-    "functions": ["AddCommittee", "BeginRegistration", "AddVoter", "InitializeVoting", "ConfirmVoting", "DenyVoting", "Vote", "GetWinner"],
+    "functions": ["AddCommittee", "BeginRegistration", "AddVoter", "InitializeVoting", "ConfirmVoting", "DenyVoting", "Vote"],
 
 
     "validTransitions": [
